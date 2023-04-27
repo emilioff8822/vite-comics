@@ -121,5 +121,44 @@ const footerImages = [
   },
 ];
 
-export { mainMenu, footerMenu, footerImages };
+
+const list1 = [
+  { text: "Elemento 1" },
+  { text: "Elemento 2" },
+  { text: "Elemento 3" },
+  { text: "Elemento 4" },
+  { text: "Elemento 5" },
+  { text: "Elemento 6" },
+  { text: "Elemento 7" },
+  { text: "Elemento 8" },
+];
+
+const list2 = [
+  { text: "Elemento 1" },
+  { text: "Elemento 2" },
+  { text: "Elemento 3" },
+  { text: "Elemento 4" },
+  { text: "Elemento 5" },
+  { text: "Elemento 6" },
+  { text: "Elemento 7" },
+  { text: "Elemento 8" },
+  { text: "Elemento 9" },
+  { text: "Elemento 10" },
+  { text: "Elemento 11" },
+  { text: "Elemento 12" }
+];
+
+const list3 = [
+  { text: "Elemento 1" },
+  { text: "Elemento 2" },
+  { text: "Elemento 3" },
+  { text: "Elemento 4" },
+  { text: "Elemento 5" },
+  { text: "Elemento 6" },
+];
+
+export { mainMenu, footerMenu, footerImages, list1, list2, list3 };
+
+
+
 
