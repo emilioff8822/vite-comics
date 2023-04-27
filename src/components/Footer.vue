@@ -1,5 +1,5 @@
 <script>
-import { mainMenu, footerMenu, footerImages } from '../data/menus';
+import { mainMenu, footerMenu, footerImages, list1, list2 ,list3 } from '../data/menus';
 export default {
   name: "Footer",
   data() {
@@ -7,6 +7,9 @@ export default {
       mainMenu,
       footerMenu,
       footerImages,
+      list1,
+      list2,
+      list3
     };
   },
 };
@@ -39,19 +42,7 @@ export default {
       </div>
       <div class="row row2">
         <div class="column column1">
-          <p>Testo casuale 1</p>
-          <ul>
-            <li>Elemento 1</li>
-            <li>Elemento 2</li>
-            <li>Elemento 3</li>
-          </ul>
-          <p>Testo casuale 2</p>
-          <ul>
-            <li>Elemento 1</li>
-            <li>Elemento 2</li>
-            <li>Elemento 3</li>
-          </ul>
-          <p>Testo casuale 3</p>
+          <h4>DC COMICS 1</h4>
           <ul>
             <li>Elemento 1</li>
             <li>Elemento 2</li>
@@ -59,6 +50,22 @@ export default {
           </ul>
         </div>
         <div class="column column2">
+          <h4>DC</h4>
+          <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+          </ul>
+        </div>
+        <div class="column column3">
+          <h4>SITES</h4>
+          <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+          </ul>
+        </div>
+        <div class="column column4">
           <!-- Lasciare vuoto -->
         </div>
       </div>
@@ -80,6 +87,9 @@ export default {
 @use '../scss/general/variables' as *;
 
 footer {
+  h4{
+    color: white;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -106,8 +116,8 @@ footer {
       justify-content: space-between;
       align-items: center;
       color: lightgray;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
       padding-right: 150px;
       padding-left: 150px;
     }
@@ -125,12 +135,16 @@ footer {
   }
 
   .column {
-    &.column1 {
-      width: 30%;
+    flex-grow: 1;
+
+    &.column1,
+    &.column2,
+    &.column3 {
+      flex-basis: 10%;
     }
 
-    &.column2 {
-      width: 70%;
+    &.column4 {
+      flex-basis: 70%;
     }
   }
 
@@ -156,7 +170,7 @@ footer {
     border: 2px solid rgb(17, 117, 232);
     color: white;
     font-weight: bold;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     cursor: pointer;
   }
 
@@ -174,6 +188,7 @@ footer {
       height: 30px;
       margin-left: 0.5rem;
     }
+    
   }
 }
 </style>
