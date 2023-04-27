@@ -16,11 +16,26 @@ export default {
   <footer>
     <div class="container">
       <div class="row row1">
-        <img class="footer-image" src="../assets/img/buy-comics-digital-comics.png" alt="img">
-        <img class="footer-image" src="../assets/img/buy-comics-merchandise.png" alt="img">
-        <img class="footer-image" src="../assets/img/buy-comics-shop-locator.png" alt="img">
-        <img class="footer-image" src="../assets/img/buy-comics-subscriptions.png" alt="img">
-        <img class="footer-image" src="../assets/img/buy-dc-power-visa.svg" alt="img">
+        <div class="footer-item">
+          <img class="footer-image" src="../assets/img/buy-comics-digital-comics.png" alt="img">
+          <span class="footer-text">DIGITAL COMICS</span>
+        </div>
+        <div class="footer-item">
+          <img class="footer-image" src="../assets/img/buy-comics-merchandise.png" alt="img">
+          <span class="footer-text">DC MERCHANDISE</span>
+        </div>
+        <div class="footer-item">
+          <img class="footer-image" src="../assets/img/buy-comics-shop-locator.png" alt="img">
+          <span class="footer-text">COMIC SHOP LOCATOR</span>
+        </div>
+        <div class="footer-item">
+          <img class="footer-image" src="../assets/img/buy-comics-subscriptions.png" alt="img">
+          <span class="footer-text">SUBSCRIPTION</span>
+        </div>
+        <div class="footer-item">
+          <img class="footer-image" src="../assets/img/buy-dc-power-visa.svg" alt="img">
+          <span class="footer-text">DC POWER VISA</span>
+        </div>
       </div>
       <div class="row row2">
         <div class="column column1">
@@ -77,8 +92,10 @@ footer {
     &.row1 {
       background-color: rgb(17, 117, 232);
       height: 25%;
-      justify-content: space-evenly;
       align-items: center;
+      justify-content: center;
+      padding-right: 150px;
+      padding-left: 150px;
     }
 
     &.row2 {
@@ -91,6 +108,8 @@ footer {
       color: lightgray;
       padding-top: 2rem;
       padding-bottom: 2rem;
+      padding-right: 150px;
+      padding-left: 150px;
     }
 
     &.row3 {
@@ -100,6 +119,8 @@ footer {
       align-items: center;
       padding-top: 2rem;
       padding-bottom: 2rem;
+      padding-right: 150px;
+      padding-left: 150px;
     }
   }
 
@@ -113,10 +134,21 @@ footer {
     }
   }
 
+  .footer-item {
+    display: flex;
+    align-items: center;
+  }
+
   .footer-image {
-    width: 5%;
+    width: 15%; 
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-right: 10px;
+  }
+
+  .footer-text {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .sign-up-btn {

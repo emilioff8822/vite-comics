@@ -46,7 +46,7 @@ align-items: center;
   margin-bottom:0;
 }
 img {
-  width: 30%
+  width: 15%
 }
 ul {
 @include centerFlex('horizontal');  
