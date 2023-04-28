@@ -61,7 +61,8 @@ Copy code
           </ul>
         </div>
         <div class="column column4">
-          <!-- Lasciare vuoto -->
+          <img class="logo" src="../assets/img/dc-logo-bg.png" alt="logo">
+
         </div>
       </div>
       <div class="row row3">
@@ -102,6 +103,7 @@ footer {
       justify-content: center;
       padding-right: 150px;
       padding-left: 150px;
+      color: white;
     }
 
     &.row2 {
@@ -112,8 +114,8 @@ footer {
       justify-content: space-between;
       align-items: center;
       color: lightgray;
-      padding-top: 6rem;
-      padding-bottom: 6rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
       padding-right: 150px;
       padding-left: 150px;
     }
@@ -143,7 +145,13 @@ footer {
       flex-basis: 70%;
     }
   }
-
+.column4{
+  display: flex;
+  justify-content: flex-end;
+}
+.logo {
+  width: 50%;
+}
   .footer-item {
     display: flex;
     align-items: center;

@@ -102,22 +102,27 @@ const footerImages = [
   {
     src: "/assets/img/buy-comics-digital-comics.png",
     alt: "img",
+    text: "DIGITAL COMICS"
   },
   {
     src: "/assets/img/buy-comics-merchandise.png",
     alt: "img",
+    text: "DC MERCHANDISE"
   },
   {
     src: "/assets/img/buy-comics-shop-locator.png",
     alt: "img",
+    text: "COMIC SHOP LOCATOR"
   },
   {
     src: "/assets/img/buy-comics-subscriptions.png",
     alt: "img",
+    text: "SUBSCRIPTION"
   },
   {
     src: "/assets/img/buy-dc-power.png",
     alt: "img",
+    text: "DC POWER VISA"
   },
 ];
 
