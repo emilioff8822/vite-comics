@@ -128,38 +128,36 @@ const footerImages = [
 
 
 const list1 = [
-  { text: "Elemento 1" },
-  { text: "Elemento 2" },
-  { text: "Elemento 3" },
-  { text: "Elemento 4" },
-  { text: "Elemento 5" },
-  { text: "Elemento 6" },
-  { text: "Elemento 7" },
-  { text: "Elemento 8" },
+  { text: "Characters" },
+  { text: "Comics" },
+  { text: "Movies" },
+  { text: "Tv" },
+  { text: "Games" },
+  { text: " Videos" },
+  { text: "News" },
 ];
 
 const list2 = [
-  { text: "Elemento 1" },
-  { text: "Elemento 2" },
-  { text: "Elemento 3" },
-  { text: "Elemento 4" },
-  { text: "Elemento 5" },
-  { text: "Elemento 6" },
-  { text: "Elemento 7" },
-  { text: "Elemento 8" },
-  { text: "Elemento 9" },
-  { text: "Elemento 10" },
-  { text: "Elemento 11" },
-  { text: "Elemento 12" }
+  { text: "Terms of Use" },
+  { text: "Privacy policy" },
+  { text: "Ad choices" },
+  { text: "Jobs" },
+  { text: "Subscriptions" },
+  { text: "Talent Workshops" },
+  { text: "CPSC Certificates" },
+  { text: "Ratings" },
+  { text: "Shop Help" },
+  { text: "Contact Us" }
+
 ];
 
 const list3 = [
-  { text: "Elemento 1" },
-  { text: "Elemento 2" },
-  { text: "Elemento 3" },
-  { text: "Elemento 4" },
-  { text: "Elemento 5" },
-  { text: "Elemento 6" },
+  { text: "DC" },
+  { text: "MAD Magazine" },
+  { text: "DC Kids" },
+  { text: "DC Universe" },
+  { text: "DC Power Visa" }
+  
 ];
 
 

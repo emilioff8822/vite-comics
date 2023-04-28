@@ -10,13 +10,25 @@ export default {
       list1,
       list2,
       list3,
-      socialIcons
+      socialIcons,
+      activeItem: null
+
+
     };
   },
+  methods: {
+    activateItem(index) {
+      this.activeItem = index;
+    },
+    deactivateItem(index) {
+      this.activeItem = null;
+    },
+  },
+
+
 };
 </script>
 
-Copy code
 <template>
   <footer>
     <div class="container">
@@ -45,25 +57,24 @@ Copy code
       <div class="row row2">
         <div class="column column1">
           <h4>DC COMICS 1</h4>
-          <ul>
-            <li v-for="(item, key) in list1" :key="key">{{ item.text }}</li>
+          <ul class="footer-menu">
+            <li v-for="(item, key) in list1" :key="key" @mouseenter="activateItem(key)" @mouseleave="deactivateItem(key)" :class="{ active: activeItem === key }">{{ item.text }}</li>
           </ul>
         </div>
         <div class="column column2">
           <h4>DC</h4>
-          <ul>
-            <li v-for="(item, key) in list2" :key="key">{{ item.text }}</li>
+          <ul class="footer-menu">
+            <li v-for="(item, key) in list2" :key="key" @mouseenter="activateItem(key)" @mouseleave="deactivateItem(key)" :class="{ active: activeItem === key }">{{ item.text }}</li>
           </ul>
         </div>
         <div class="column column3">
           <h4>SITES</h4>
-          <ul>
-            <li v-for="(item, key) in list3" :key="key">{{ item.text }}</li>
+          <ul class="footer-menu">
+            <li v-for="(item, key) in list3" :key="key" @mouseenter="activateItem(key)" @mouseleave="deactivateItem(key)" :class="{ active: activeItem === key }">{{ item.text }}</li>
           </ul>
         </div>
         <div class="column column4">
           <img class="logo" src="../assets/img/dc-logo-bg.png" alt="logo">
-
         </div>
       </div>
       <div class="row row3">
@@ -80,12 +91,28 @@ Copy code
   </footer>
 </template>
 
-<style lang="scss" scoped>
+
+<style lang="scss">
 @use '../scss/general/variables' as *;
 
 footer {
-  h4{
+  h4 {
     color: white;
+    font-size: larger;
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  .footer-menu {
+    li {
+      color: lightgray;
+    }
+
+    li.active {
+      color: yellow;
+    }
   }
 
   .container {
@@ -119,6 +146,11 @@ footer {
       padding-bottom: 2rem;
       padding-right: 150px;
       padding-left: 150px;
+
+      .column {
+        margin-left: 1rem; // Aggiungi un margine sinistro
+        margin-right: 2rem; // Aggiungi un margine destro
+      }
     }
 
     &.row3 {
@@ -146,20 +178,23 @@ footer {
       flex-basis: 70%;
     }
   }
-.column4{
-  display: flex;
-  justify-content: flex-end;
-}
-.logo {
-  width: 50%;
-}
+
+  .column4 {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
   .footer-item {
     display: flex;
     align-items: center;
   }
 
   .footer-image {
-    width: 15%; 
+    width: 15%;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-right: 10px;
@@ -193,7 +228,6 @@ footer {
       height: 30px;
       margin-left: 0.5rem;
     }
-    
   }
 }
 </style>
