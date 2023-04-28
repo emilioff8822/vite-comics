@@ -43,7 +43,7 @@ export default {
 .jumbotron {
   background-image: url('../assets/img/jumbotron.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   height: 40%;
   display: flex;

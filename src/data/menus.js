@@ -100,12 +100,12 @@ const footerMenu = {
 
 const footerImages = [
   {
-    src: "/assets/img/buy-comics-digital-comics.png",
+    src: "./assets/img/buy-comics-digital-comics.png",
     alt: "img",
     text: "DIGITAL COMICS"
   },
   {
-    src: "/assets/img/buy-comics-merchandise.png",
+    src: "@/assets/img/buy-comics-merchandise.png",
     alt: "img",
     text: "DC MERCHANDISE"
   },

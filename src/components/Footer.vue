@@ -60,6 +60,7 @@ export default {
           <img class="footer-image" src="../assets/img/buy-dc-power-visa.svg" alt="img">
           <span class="footer-text">DC POWER VISA</span>
         </div>
+
       </div>
       <div class="row row2">
         
