@@ -160,6 +160,11 @@ const list3 = [
   
 ];
 
+const list4 = [
+  { text: "Shop DC" },
+  { text: "Shop DC Collections" },
+];
+
 
 const socialIcons = [
   { src: "../assets/img/footer-facebook.png", alt: "Facebook" },
@@ -168,7 +173,7 @@ const socialIcons = [
   { src: "../assets/img/footer-twitter.png", alt: "Twitter" },
 ];
 
-export { mainMenu, footerMenu, footerImages, list1, list2, list3, socialIcons };
+export { mainMenu, footerMenu, footerImages, list1, list2, list3, list4, socialIcons };
 
 
 

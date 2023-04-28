@@ -1,5 +1,5 @@
 <script>
-import { mainMenu, footerMenu, footerImages, list1, list2 ,list3, socialIcons } from '../data/menus';
+import { mainMenu, footerMenu, footerImages, list1, list2 ,list3,list4, socialIcons } from '../data/menus';
 export default {
   name: "Footer",
   data() {
@@ -10,18 +10,19 @@ export default {
       list1,
       list2,
       list3,
+      list4,
       socialIcons,
-      activeItem: null
+      hoveredItem: null
 
 
     };
   },
   methods: {
-    activateItem(index) {
-      this.activeItem = index;
+    onMouseOver(item) {
+      this.hoveredItem = item;
     },
-    deactivateItem(index) {
-      this.activeItem = null;
+    onMouseOut() {
+      this.hoveredItem = null;
     },
   },
 
@@ -55,24 +56,30 @@ export default {
         </div>
       </div>
       <div class="row row2">
+        
         <div class="column column1">
           <h4>DC COMICS 1</h4>
           <ul class="footer-menu">
-            <li v-for="(item, key) in list1" :key="key" @mouseenter="activateItem(key)" @mouseleave="deactivateItem(key)" :class="{ active: activeItem === key }">{{ item.text }}</li>
+            <li v-for="(item, key) in list1" :key="key" @mouseover="onMouseOver(item)" @mouseout="onMouseOut" :class="{ active: hoveredItem === item }">{{ item.text }}</li>
+          </ul>
+          <h4>SHOP</h4>
+          <ul class="footer-menu">
+            <li v-for="(item, key) in list4" :key="key" @mouseover="onMouseOver(item)" @mouseout="onMouseOut" :class="{ active: hoveredItem === item }">{{ item.text }}</li>
           </ul>
         </div>
         <div class="column column2">
           <h4>DC</h4>
           <ul class="footer-menu">
-            <li v-for="(item, key) in list2" :key="key" @mouseenter="activateItem(key)" @mouseleave="deactivateItem(key)" :class="{ active: activeItem === key }">{{ item.text }}</li>
+            <li v-for="(item, key) in list2" :key="key" @mouseover="onMouseOver(item)" @mouseout="onMouseOut" :class="{ active: hoveredItem === item }">{{ item.text }}</li>
           </ul>
         </div>
         <div class="column column3">
           <h4>SITES</h4>
           <ul class="footer-menu">
-            <li v-for="(item, key) in list3" :key="key" @mouseenter="activateItem(key)" @mouseleave="deactivateItem(key)" :class="{ active: activeItem === key }">{{ item.text }}</li>
+            <li v-for="(item, key) in list3" :key="key" @mouseover="onMouseOver(item)" @mouseout="onMouseOut" :class="{ active: hoveredItem === item }">{{ item.text }}</li>
           </ul>
         </div>
+
         <div class="column column4">
           <img class="logo" src="../assets/img/dc-logo-bg.png" alt="logo">
         </div>
