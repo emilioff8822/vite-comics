@@ -13,6 +13,6 @@ name: "Main"
   
 </template>
 
-<style>
+<style lang="scss">
 
 </style>
