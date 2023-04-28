@@ -12,7 +12,9 @@ export default {
       list3,
       list4,
       socialIcons,
-      hoveredItem: null
+      hoveredItem: null,
+      hoveredIcon: null
+
 
 
     };
@@ -24,9 +26,13 @@ export default {
     onMouseOut() {
       this.hoveredItem = null;
     },
-  },
-
-
+    onIconMouseOver(event) {
+      this.hoveredIcon = event.target.alt;
+    },
+    onIconMouseOut() {
+      this.hoveredIcon = null;
+    }
+  }
 };
 </script>
 
@@ -88,10 +94,11 @@ export default {
         <button class="sign-up-btn">SIGN-UP NOW</button>
         <div class="follow-us">
           <span>FOLLOW US</span>
-          <img src="../assets/img/footer-facebook.png" alt="logo">
-          <img src="../assets/img/footer-periscope.png" alt="logo">
-          <img src="../assets/img/footer-pinterest.png" alt="logo">
-          <img src="../assets/img/footer-twitter.png" alt="logo">
+          <img src="../assets/img/footer-facebook.png" alt="logo" @mouseover="onIconMouseOver($event)" @mouseout="onIconMouseOut($event)" :class="{ 'icon-hover': hoveredIcon === 'facebook' }">
+          <img src="../assets/img/footer-periscope.png" alt="logo" @mouseover="onIconMouseOver($event)" @mouseout="onIconMouseOut($event)" :class="{ 'icon-hover': hoveredIcon === 'periscope' }">
+          <img src="../assets/img/footer-pinterest.png" alt="logo" @mouseover="onIconMouseOver($event)" @mouseout="onIconMouseOut($event)" :class="{ 'icon-hover': hoveredIcon === 'pinterest' }">
+          <img src="../assets/img/footer-twitter.png" alt="logo" @mouseover="onIconMouseOver($event)" @mouseout="onIconMouseOut($event)" :class="{ 'icon-hover': hoveredIcon === 'twitter' }">
+          
         </div>
       </div>
     </div>
@@ -110,6 +117,10 @@ footer {
 
   li {
     cursor: pointer;
+  }
+  .icon-hover {
+    transform: scale(1.5);
+    transition: transform 0.3s;
   }
 
   .footer-menu {

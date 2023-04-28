@@ -1,7 +1,14 @@
 <script>
+import { cardsData } from "../data/menus";
+
 export default {
-  name: "Main"
-}
+  name: "Main",
+  data() {
+    return {
+      cards: cardsData
+    };
+  }
+};
 </script>
 
 <template>
@@ -10,8 +17,18 @@ export default {
       <img class="logo" src="../assets/img/jumbotron.jpg" alt="logo">
     </div>
     <div class="card-container">
-      <!-- Contenuto della card container -->
-      
+        <div
+          class="card"
+          v-for="card in cards"
+          :key="card.thumb"
+        >
+          <div class="card-img-container">
+            <img :src="card.thumb" :alt="card.series">
+          </div>
+          <p>{{ card.price }}</p>
+          <p>{{ card.series }}</p>
+          <p>{{ card.type }}</p>
+        </div>
     </div>
   </div>
 </template>
@@ -37,9 +54,40 @@ export default {
 .card-container {
   background-color: black;
   height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .logo {
   width: 100%;
+}
+
+.card {
+  flex: 0 0 calc(100% / 6 - 1rem);
+  margin: 0.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+}
+
+.card-img-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 </style>
