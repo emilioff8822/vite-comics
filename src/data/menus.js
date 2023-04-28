@@ -162,7 +162,15 @@ const list3 = [
   { text: "Elemento 6" },
 ];
 
-export { mainMenu, footerMenu, footerImages, list1, list2, list3 };
+
+const socialIcons = [
+  { src: "../assets/img/footer-facebook.png", alt: "Facebook" },
+  { src: "../assets/img/footer-periscope.png", alt: "Periscope" },
+  { src: "../assets/img/footer-pinterest.png", alt: "Pinterest" },
+  { src: "../assets/img/footer-twitter.png", alt: "Twitter" },
+];
+
+export { mainMenu, footerMenu, footerImages, list1, list2, list3, socialIcons };
 
 
 

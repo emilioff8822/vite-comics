@@ -1,5 +1,5 @@
 <script>
-import { mainMenu, footerMenu, footerImages, list1, list2 ,list3 } from '../data/menus';
+import { mainMenu, footerMenu, footerImages, list1, list2 ,list3, socialIcons } from '../data/menus';
 export default {
   name: "Footer",
   data() {
@@ -9,7 +9,8 @@ export default {
       footerImages,
       list1,
       list2,
-      list3
+      list3,
+      socialIcons
     };
   },
 };
