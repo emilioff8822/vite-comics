@@ -36,6 +36,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
   .logo {
     margin-bottom: 0;
     width: 20%;
@@ -43,18 +44,27 @@ header {
     align-items: center;
     img {
       width: 20%;
+      height: auto;
     }
   }
+  
   nav {
     flex: 1;
     ul {
-      @include centerFlex("horizontal");
+      display: flex;
+      justify-content: flex-end;
+      
+      li {
+        margin-left: 1rem;
+      }
+      
       a {
         display: inline-block;
         padding: 1rem;
         text-transform: capitalize;
         font-weight: 600;
         color: $link-color;
+        
         &:hover,
         &.active {
           background-color: lighten($primary-color, $amount: 50%);
@@ -63,4 +73,5 @@ header {
     }
   }
 }
+
 </style>
