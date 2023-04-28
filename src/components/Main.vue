@@ -17,20 +17,22 @@ export default {
       <img class="logo" src="../assets/img/jumbotron.jpg" alt="logo">
     </div>
     <div class="card-container">
-        <div
-          class="card"
-          v-for="card in cards"
-          :key="card.thumb"
-        >
-          <div class="card-img-container">
-            <img :src="card.thumb" :alt="card.series">
-          </div>
-          <p>{{ card.price }}</p>
-          <p>{{ card.series }}</p>
-          <p>{{ card.type }}</p>
+      <div
+        class="card"
+        v-for="card in cards"
+        :key="card.thumb"
+      >
+        <div class="card-img-container">
+          <img :src="card.thumb" :alt="card.series">
         </div>
+        <p>{{ card.price }}</p>
+        <p>{{ card.series }}</p>
+        <p>{{ card.type }}</p>
+      </div>
+      <button class="load-more">LOAD MORE</button>
     </div>
-  </div>
+      </div>
+    
 </template>
 
 <style lang="scss">
@@ -58,6 +60,9 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+  padding-top: 50px;
+  padding-right: 200px;
+  padding-left: 200px;
 }
 
 .logo {
@@ -88,6 +93,20 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.load-more {
+  background-color: rgb(17, 117, 232);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(31, 152, 168);
   }
 }
 </style>
