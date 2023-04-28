@@ -147,8 +147,8 @@ footer {
       height: 25%;
       align-items: center;
       justify-content: center;
-      padding-right: 150px;
-      padding-left: 150px;
+      padding-right: 200px;
+      padding-left: 200px;
       color: white;
     }
 

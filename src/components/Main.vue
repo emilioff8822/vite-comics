@@ -17,11 +17,10 @@ export default {
       <img class="logo" src="../assets/img/jumbotron.jpg" alt="logo">
     </div>
     <div class="card-container">
-      <div
-        class="card"
-        v-for="card in cards"
-        :key="card.thumb"
-      >
+      <div class="current-series">
+        CURRENT SERIES
+      </div>
+      <div class="card" v-for="card in cards" :key="card.thumb">
         <div class="card-img-container">
           <img :src="card.thumb" :alt="card.series">
         </div>
@@ -31,8 +30,7 @@ export default {
       </div>
       <button class="load-more">LOAD MORE</button>
     </div>
-      </div>
-    
+  </div>
 </template>
 
 <style lang="scss">
@@ -51,6 +49,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .card-container {
@@ -63,11 +62,37 @@ export default {
   padding-top: 50px;
   padding-right: 200px;
   padding-left: 200px;
+  position: relative;
+}
+
+.current-series {
+  position: absolute;
+  top: calc(-2%);
+  left: 200px;
+  z-index: 1;
+  background-color: rgb(17, 117, 232);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(31, 152, 168);
+  }
 }
 
 .logo {
   width: 100%;
+  height: auto;
+  overflow: hidden;
 }
+img.logo{
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+  
+}
+
 
 .card {
   flex: 0 0 calc(100% / 6 - 1rem);
