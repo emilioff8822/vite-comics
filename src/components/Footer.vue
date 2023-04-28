@@ -15,6 +15,7 @@ export default {
 };
 </script>
 
+Copy code
 <template>
   <footer>
     <div class="container">
@@ -44,25 +45,19 @@ export default {
         <div class="column column1">
           <h4>DC COMICS 1</h4>
           <ul>
-            <li>Elemento 1</li>
-            <li>Elemento 2</li>
-            <li>Elemento 3</li>
+            <li v-for="(item, key) in list1" :key="key">{{ item.text }}</li>
           </ul>
         </div>
         <div class="column column2">
           <h4>DC</h4>
           <ul>
-            <li>Elemento 1</li>
-            <li>Elemento 2</li>
-            <li>Elemento 3</li>
+            <li v-for="(item, key) in list2" :key="key">{{ item.text }}</li>
           </ul>
         </div>
         <div class="column column3">
           <h4>SITES</h4>
           <ul>
-            <li>Elemento 1</li>
-            <li>Elemento 2</li>
-            <li>Elemento 3</li>
+            <li v-for="(item, key) in list3" :key="key">{{ item.text }}</li>
           </ul>
         </div>
         <div class="column column4">
@@ -90,6 +85,7 @@ footer {
   h4{
     color: white;
   }
+
   .container {
     display: flex;
     flex-direction: column;
