@@ -6,7 +6,8 @@ export default {
 name: "Header",
 data () {
 return{
-  mainMenu
+  mainMenu,
+  
 }  
 }
 }
