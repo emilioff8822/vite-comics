@@ -46,7 +46,6 @@ export default {
   <footer>
     <div class="container">
       <div class="row row1">
-       
         <div class="footer-item" v-for="(item, index) in footerImages" :key="index">
           <img class="footer-image" :src="getImage(item.src)" :alt="item.alt">
           <span class="footer-text">{{ item.text }}</span>
@@ -54,7 +53,6 @@ export default {
       </div>
       
       <div class="row row2">
-        
         <div class="column column1">
           <h4>DC COMICS 1</h4>
           <ul class="footer-menu">
@@ -82,15 +80,20 @@ export default {
           <img class="logo" src="../assets/img/dc-logo-bg.png" alt="logo">
         </div>
       </div>
+     
       <div class="row row3">
         <button class="sign-up-btn">SIGN-UP NOW</button>
         <div class="follow-us">
           <span>FOLLOW US</span>
-          <img src="../assets/img/footer-facebook.png" alt="logo" @mouseover="onIconMouseOver($event)" @mouseout="onIconMouseOut($event)" :class="{ 'icon-hover': hoveredIcon === 'facebook' }">
-          <img src="../assets/img/footer-periscope.png" alt="logo" @mouseover="onIconMouseOver($event)" @mouseout="onIconMouseOut($event)" :class="{ 'icon-hover': hoveredIcon === 'periscope' }">
-          <img src="../assets/img/footer-pinterest.png" alt="logo" @mouseover="onIconMouseOver($event)" @mouseout="onIconMouseOut($event)" :class="{ 'icon-hover': hoveredIcon === 'pinterest' }">
-          <img src="../assets/img/footer-twitter.png" alt="logo" @mouseover="onIconMouseOver($event)" @mouseout="onIconMouseOut($event)" :class="{ 'icon-hover': hoveredIcon === 'twitter' }">
-          
+          <img
+            v-for="(icon, index) in socialIcons"
+            :key="index"
+            :src="getImage(icon.src)"
+            :alt="icon.alt"
+            @mouseover="onIconMouseOver($event, icon.alt)"
+            @mouseout="onIconMouseOut($event)"
+            :class="{ 'icon-hover': hoveredIcon === icon.alt }"
+          >
         </div>
       </div>
     </div>
