@@ -31,7 +31,13 @@ export default {
     },
     onIconMouseOut() {
       this.hoveredIcon = null;
-    }
+    },
+    getImagePath(imagePath) {
+      return require('@/assets/' + imagePath);
+    },
+    getImage(img) {
+    return new URL(img, import.meta.url).href;
+  }
   }
 };
 </script>
@@ -40,28 +46,13 @@ export default {
   <footer>
     <div class="container">
       <div class="row row1">
-        <div class="footer-item">
-          <img class="footer-image" src="../assets/img/buy-comics-digital-comics.png" alt="img">
-          <span class="footer-text">DIGITAL COMICS</span>
+       
+        <div class="footer-item" v-for="(item, index) in footerImages" :key="index">
+          <img class="footer-image" :src="getImage(item.src)" :alt="item.alt">
+          <span class="footer-text">{{ item.text }}</span>
         </div>
-        <div class="footer-item">
-          <img class="footer-image" src="../assets/img/buy-comics-merchandise.png" alt="img">
-          <span class="footer-text">DC MERCHANDISE</span>
-        </div>
-        <div class="footer-item">
-          <img class="footer-image" src="../assets/img/buy-comics-shop-locator.png" alt="img">
-          <span class="footer-text">COMIC SHOP LOCATOR</span>
-        </div>
-        <div class="footer-item">
-          <img class="footer-image" src="../assets/img/buy-comics-subscriptions.png" alt="img">
-          <span class="footer-text">SUBSCRIPTION</span>
-        </div>
-        <div class="footer-item">
-          <img class="footer-image" src="../assets/img/buy-dc-power-visa.svg" alt="img">
-          <span class="footer-text">DC POWER VISA</span>
-        </div>
-
       </div>
+      
       <div class="row row2">
         
         <div class="column column1">

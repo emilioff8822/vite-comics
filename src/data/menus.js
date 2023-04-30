@@ -100,27 +100,27 @@ const footerMenu = {
 
 const footerImages = [
   {
-    src: "./assets/img/buy-comics-digital-comics.png",
+    src: "../assets/img/buy-comics-digital-comics.png",
     alt: "img",
     text: "DIGITAL COMICS"
   },
   {
-    src: "@/assets/img/buy-comics-merchandise.png",
+    src: "../assets/img/buy-comics-merchandise.png",
     alt: "img",
     text: "DC MERCHANDISE"
   },
   {
-    src: "/assets/img/buy-comics-shop-locator.png",
+    src: "../assets/img/buy-comics-shop-locator.png",
     alt: "img",
     text: "COMIC SHOP LOCATOR"
   },
   {
-    src: "/assets/img/buy-comics-subscriptions.png",
+    src: "../assets/img/buy-comics-subscriptions.png",
     alt: "img",
     text: "SUBSCRIPTION"
   },
   {
-    src: "/assets/img/buy-dc-power.png",
+    src: "../assets/img/buy-dc-power-visa.svg",
     alt: "img",
     text: "DC POWER VISA"
   },
@@ -248,6 +248,8 @@ const cardsData = [
     "type": "graphic novel"
   }
 ];
+
+
 
 
 export { mainMenu, footerMenu, footerImages, list1, list2, list3, list4, socialIcons, cardsData };
