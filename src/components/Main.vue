@@ -1,8 +1,12 @@
 <script>
 import { cardsData } from "../data/menus";
+import Card from './Card.vue';
 
 export default {
   name: "Main",
+  components: {
+    Card
+  },
   data() {
     return {
       cards: cardsData
@@ -20,14 +24,14 @@ export default {
       <div class="current-series">
         CURRENT SERIES
       </div>
-      <div class="card" v-for="card in cards" :key="card.thumb">
-        <div class="card-img-container">
-          <img :src="card.thumb" :alt="card.series">
-        </div>
-        <p>{{ card.price }}</p>
-        <p>{{ card.series }}</p>
-        <p>{{ card.type }}</p>
-      </div>
+      <Card
+        v-for="card in cards"
+        :key="card.thumb"
+        :thumb="card.thumb"
+        :price="card.price"
+        :series="card.series"
+        :type="card.type"
+      />
       <button class="load-more">LOAD MORE</button>
     </div>
   </div>
